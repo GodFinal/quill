@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="./quill.snow.css">
+  <link rel="stylesheet" href="./tomorrow-night.css">
+</head>
+<body>
+<div id="toolbar">
+  <span class="ql-formats">
+    <select class="ql-align"></select>
+    <button class="ql-direction" value="rtl"></button>
+    <button class="ql-indent" value="-1"></button>
+      <button class="ql-indent" value="+1"></button>
+    <select class="ql-color"></select>
+    <select class="ql-background"></select>
+  <select class="ql-font"></select>
+    <select class="ql-size"></select>
+    <button class="ql-blockquote"></button>
+<select class="ql-header"></select>
+<select class="ql-list" value="ordered"></select>
+      <select class="ql-list" value="bullet"></select>
+
+
+ <button class="ql-bold"></button>
+<button class="ql-italic"></button>
+    <button class="ql-underline"></button>
+    <button class="ql-strike"></button>
+
+
+     <button class="ql-link"></button>
+
+
+
+
+
+
+
+  </span>
+
+</div>
+<div id="get">sdfsdfsdfsdf</div>
+<!-- Create the editor container -->
+<div id="editor">
+  <p style="margin-left:40px;">在这一章节中我们继续来了<span style="font-family: serif;">解 JS 的一些常考和</span><span
+    style="font-family: monospace;">容易混乱的</span>基础知识点。</p>
+  <p>
+    <span class="hljs-string">`a</span>
+    <span class="hljs-subst">${b}</span>
+    <span class="hljs-string">`</span>
+  </p>
+  <p><span class="hljs-keyword">function</span></p>
+  <p><code>123</code></p>
+  <table>
+  <tr><th>www</th></tr>
+  <tr><td>dsf</td></tr>
+  </table>
+  <p><span class="ql-font-monospace">ads</span><span class="ql-font-monospace ql-size-large">adfsadfasd</span><span class="ql-font-monospace">fsadfsadf</span></p>
+  <h3><strong>block</strong></h3>
+  <p>func<strong>tio<em><u>n </u>m</em>a</strong>x</p>
+  <br>
+  <p>This editor has been wired up to render code blocks as instances of
+    the <a href="http://codemirror.net">CodeMirror</a> code editor, which
+    provides syntax highlighting, auto-indentation, and similar.</p>
+  <pre data-language="javascript">function $initHighlight(block, cls) {
+  try {
+    if (cls.search(/\bno\-highlight\b/) != -1)
+      return process(block, true, 0x0F) +
+             ` class="${cls}"`;
+  } catch (e) {
+    /* handle exception */
+  }
+  for (var i = 0 / 2; i < classes.length; i++) {
+    if (checkCondition(classes[i]) === undefined)
+      console.log('undefined');
+  }
+}
+
+export  $initHighlight;</pre>
+    <pre data-language="javascript">`a${b}`
+  function max (){
+    let qq=0;
+  }
+    </pre>
+  <p>The content of the code editor is kept in sync with the content of
+    the code block in the rich text editor, so that it is as if you're
+    directly editing the outer document, using a more convenient
+    interface.</p>
+
+  <h2>The three greatest things you learn from traveling</h2>
+
+  <p>Like all the great things on earth traveling teaches us by example. Here are some of the most precious lessons
+    I&#x2019;ve learned over the years of traveling.</p>
+
+
+  <h3>Appreciation of diversity</h3>
+
+  <p>Getting used to an entirely different culture can be challenging. While it&#x2019;s also nice to learn about
+    cultures online or from books, nothing comes close to experiencing cultural diversity in person. You learn to
+    appreciate each and every single one of the differences while you become more culturally fluid.</p>
+
+  <blockquote>
+    <p>The real voyage of discovery consists not in seeking new landscapes, but having new eyes.</p>
+    <p><strong>Marcel Proust</strong></p>
+  </blockquote>
+
+  <h3>Improvisation</h3>
+
+  <p>Life doesn&apos;t allow us to execute every single plan perfectly. This especially seems to be the case when
+    you travel. You plan it down to every minute with a big checklist; but when it comes to executing it, something
+    always comes up and you&#x2019;re left with your improvising skills. You learn to adapt as you go. Here&#x2019;s
+    how my travel checklist looks now:</p>
+
+  <ul>
+    <li>buy the ticket</li>
+    <li>start your adventure</li>
+  </ul>
+
+  <figure class="image image-style-side">
+    <img src="https://via.placeholder.com/400x200/02c7cd/fff?text=Placeholder%20image"
+         alt="Three Monks walking on ancient temple.">
+    <figcaption>Leaving your comfort zone might lead you to such beautiful sceneries like this one.</figcaption>
+  </figure>
+
+  <h3>Confidence</h3>
+
+  <p>Going to a new place can be quite terrifying. While change and uncertainty makes us scared, traveling teaches
+    us how ridiculous it is to be afraid of something before it happens. The moment you face your fear and see there
+    was nothing to be afraid of, is the moment you discover bliss.</p>
+  <p>Simple image:</p>
+
+  <figure class="image">
+    <img src="https://via.placeholder.com/800x300/02c7cd/fff?text=Placeholder%20image" alt="CKEditor 5 rocks!">
+
+
+function parseHtml(node) {
+	// dom.children.length
+	if (node.nodeType === node.TEXT_NODE) {
+		return {insert: node.data};
+	}
+	if (node.nodeType === node.ELEMENT_NODE) {
+		return Array.from(node.childNodes || []).reduce((domList, childNode) => {
+			let childrenHtml = parseHtml(childNode);
+			if (childNode.nodeType === node.ELEMENT_NODE) {
+
+			}
+			if (childNode.nodeType === node.TEXT_NODE) {
+				childrenHtml['class'] = node.className;
+				childrenHtml=`<span class="${node.className}">${childrenHtml.insert}</span>`
+			}
+			return domList.concat(childrenHtml);
+		}, []);
+	}
+}
+
+// container.innerHTML = parseHtml(dom).reduce((html, item)=> {
+// 	return `${html}<span class="${item.class}">${item.insert}</span>`
+// }, '');
+
+
+  </figure>
+</div>
+<script src="./quill.js"></script>
+</body>
+</html>
